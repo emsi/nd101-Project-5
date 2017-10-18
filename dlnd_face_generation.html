@@ -13881,7 +13881,8 @@ Default GPU Device: /gpu:0
 <div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">model_loss</span><span class="p">(</span><span class="n">input_real</span><span class="p">,</span> <span class="n">input_z</span><span class="p">,</span> <span class="n">out_channel_dim</span><span class="p">,</span> <span class="n">smoothing</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">image_scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># based on the code from https://github.com/udacity/deep-learning/blob/master/dcgan-svhn/DCGAN_Exercises.ipynb</span>
+<span class="k">def</span> <span class="nf">model_loss</span><span class="p">(</span><span class="n">input_real</span><span class="p">,</span> <span class="n">input_z</span><span class="p">,</span> <span class="n">out_channel_dim</span><span class="p">,</span> <span class="n">smoothing</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">image_scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the loss for the discriminator and generator</span>
 <span class="sd">    :param input_real: Images from the real dataset</span>
@@ -13950,7 +13951,8 @@ Default GPU Device: /gpu:0
 <div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">model_opt</span><span class="p">(</span><span class="n">d_loss</span><span class="p">,</span> <span class="n">g_loss</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">,</span> <span class="n">beta1</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># based on the code from https://github.com/udacity/deep-learning/blob/master/dcgan-svhn/DCGAN_Exercises.ipynb</span>
+<span class="k">def</span> <span class="nf">model_opt</span><span class="p">(</span><span class="n">d_loss</span><span class="p">,</span> <span class="n">g_loss</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">,</span> <span class="n">beta1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get optimization operations</span>
 <span class="sd">    :param d_loss: Discriminator loss Tensor</span>
